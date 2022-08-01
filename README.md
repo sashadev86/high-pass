@@ -1,1 +1,1 @@
-# -high-pass
+# high-pass
