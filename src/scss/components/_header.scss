@@ -1,0 +1,58 @@
+.header {
+  height: 80px;
+  background-color: var(--nero-color);
+
+  &__container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+  }
+
+  &__link {
+    grid-column: 1 / span 2;
+
+    &-logo {
+      padding-top: 2px;
+    }
+  }
+
+  .nav {
+    grid-column: 4 / 11;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 7px;
+      padding-right: 3px;
+    }
+
+    &__link {
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: var(--white-color);
+    }
+  }
+
+  &__wrap {
+    grid-column: 11 / span 12;
+    display: grid;
+    justify-content: flex-end;
+  }
+
+  &__wrap-btn {
+    width: 25px;
+    height: 25px;
+
+    svg {
+      fill: var(--white-color);
+      width: 25px;
+      height: 25px;
+    }
+  }
+}

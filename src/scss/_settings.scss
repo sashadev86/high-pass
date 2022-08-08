@@ -44,6 +44,8 @@ a {
   padding: 0;
   background: transparent;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 
 .list-reset {
@@ -104,4 +106,19 @@ a {
 
 .page--ios .dis-scroll {
   position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+figure,
+input {
+  margin: 0;
+  padding: 0;
 }
