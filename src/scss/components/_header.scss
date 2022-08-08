@@ -3,6 +3,7 @@
   background-color: var(--nero-color);
 
   &__container {
+    position: relative;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -43,16 +44,76 @@
     grid-column: 11 / span 12;
     display: grid;
     justify-content: flex-end;
+
+    &-btn {
+      width: 25px;
+      height: 25px;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+      &-hidden {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      svg {
+        fill: var(--white-color);
+        width: 25px;
+        height: 25px;
+      }
+    }
+
   }
 
-  &__wrap-btn {
-    width: 25px;
-    height: 25px;
+  &__form {
+    position: absolute;
+    top: 26px;
+    right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  }
+
+  &__form-active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__form-input {
+    margin-right: 10px;
+    width: 308px;
+    background-color: var(--nero-color);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--whisper-color);
+
+    &::placeholder {
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      color: var(--white-color);
+    }
+  }
+
+  &__form-closed {
+    width: 23px;
+    height: 23px;
+    background-color: #808080;
+    background-size: contain;
+    border-radius: 100%;
 
     svg {
       fill: var(--white-color);
-      width: 25px;
-      height: 25px;
+      width: 10.68px;
+      height: 10.57px;
     }
   }
 }

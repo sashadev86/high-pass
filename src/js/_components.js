@@ -1,1 +1,1 @@
-console.log('components');
+import './components/search'

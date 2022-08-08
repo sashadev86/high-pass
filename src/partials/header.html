@@ -1,7 +1,8 @@
 <header class="header">
   <div class="container header__container">
     <a href="#" class="header__link">
-      <img loading="lazy" src="img/logo.svg" class="header__link-logo" width="190.25" height="30.7" alt="Логотип студии High Pass">
+      <img loading="lazy" src="img/logo.svg" class="header__link-logo" width="190.25" height="30.7"
+        alt="Логотип студии High Pass">
     </a>
     <nav class="nav" title="Навигация по сайту">
       <ul class="list-reset nav__list">
@@ -18,8 +19,16 @@
           <use xlink:href="img/sprite.svg#search"></use>
         </svg>
       </button>
+
+      <form class="header__form" action="/">
+        <input class="header__form-input" type="search" placeholder="Что будем иcкать?">
+
+        <button class="btn-reset header__form-closed" type="button">
+          <svg class="">
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
+      </form>
     </div>
   </div>
 </header>
-
-
