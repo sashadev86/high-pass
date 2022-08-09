@@ -9,6 +9,42 @@
     column-gap: 31px;
   }
 
+  &__left {
+    padding: 405px 145px 60px 60px;
+  }
+
+  &__left-text {
+    margin-bottom: 3px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--white-color);
+  }
+
+  &__left-title {
+    margin-bottom: 19px;
+    max-width: 427px;
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 104%;
+    color: var(--white-color);
+  }
+
+  &__left-btn {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--white-color);
+    padding: 15.5px 22px;
+    background-color: var(--burnt-orange-color);
+  }
+
   &__right-title {
     grid-row: 1/1;
     grid-column: 7/13;
@@ -63,4 +99,18 @@
     background-size: cover;
     background-position: center;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(100%);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
 }
