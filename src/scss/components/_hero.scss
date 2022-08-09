@@ -10,8 +10,24 @@
   }
 
   &__left {
+    position: relative;
     padding: 405px 145px 60px 60px;
+
+    &-tag {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      padding: 7px 15px;
+      background-color: var(--nero-color);
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--white-color);
+    }
   }
+
 
   &__left-text {
     margin-bottom: 3px;
@@ -99,18 +115,4 @@
     background-size: cover;
     background-position: center;
   }
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(100%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-  white-space: nowrap;
 }
