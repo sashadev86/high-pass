@@ -32,11 +32,12 @@
       left: 0;
       bottom: 0;
       bottom: 60px;
-      left: 55px;
+      left: 58px;
     }
 
     &-text {
       margin-bottom: 3px;
+      padding-left: 1px;
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
@@ -53,6 +54,10 @@
       font-size: 36px;
       line-height: 104%;
       color: var(--white-color);
+    }
+
+    &-btn {
+      margin-left: 2px;
     }
   }
 
