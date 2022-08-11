@@ -1,0 +1,74 @@
+.footer {
+  padding-top: 24px;
+  padding-bottom: 16px;
+  background-color: var(--nero-color);
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &__left {
+    grid-column: 1/4;
+  }
+
+  &__logo {
+    margin-bottom: 4px;
+    padding-top: 2px;
+  }
+
+  &__signature {
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--whisper-color);
+  }
+
+  &__copy {
+    grid-column: 5/9;
+    max-width: 365px;
+    padding-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--very-light-grey);
+  }
+
+  &__right {
+    grid-column: 11/13;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+
+  &__interesting {
+    margin-bottom: 8px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--whisper-color);
+  }
+}
+
+.social {
+  min-width: 161px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--whisper-color);
+  }
+}
