@@ -41,4 +41,8 @@
       color: var(--white-color);
     }
   }
+
+  &__form .just-validate-error-label {
+    top: -12px;
+  }
 }
