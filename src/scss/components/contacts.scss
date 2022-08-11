@@ -1,0 +1,164 @@
+.contacts {
+  padding-top: 34px;
+  padding-bottom: 69px;
+
+  &__title {
+    margin-bottom: 22px;
+    color: var(--nero-color);
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  &__map {
+    grid-column: 1/9;
+    height: 460px;
+  }
+
+  [class*="ground-pane"] {
+    filter: grayscale(1);
+  }
+
+  .ymaps-2-1-79-copyright__content {
+    display: none !important;
+  }
+
+  .ymaps-2-1-79-map-copyrights-promo {
+    display: none;
+  }
+
+  .ymaps-2-1-79-controls__toolbar {
+    margin-top: 0!important;
+  }
+
+  .ymaps-2-1-79-controls__control_toolbar {
+    margin-left: 0!important;
+  }
+
+  .customControl {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32, 32, 32, 0.85);
+    width: 410px;
+    height: 460px;
+    padding-top: 12px;
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="10" cy="10" r="10" fill="%23999999"/%3E%3Crect x="6.20715" y="5.5" width="12" height="1" transform="rotate(45 6.20715 5.5)" fill="white"/%3E%3Crect x="5.59143" y="13.9854" width="12" height="1" transform="rotate(-45 5.59143 13.9854)" fill="white"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    padding: 5px;
+    max-height: 250px;
+    overflow: auto;
+  }
+
+  a,
+  a:visited {
+    color: #04b;
+    text-decoration: none !important;
+  }
+
+  &__right {
+    grid-column: 9/13;
+
+    &-title {
+      margin-top: -7px;
+      margin-bottom: 5px;
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 22px;
+      color: var(--nero-color);
+    }
+
+    &-text {
+      margin-bottom: 14px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--nobel-color);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    max-width: 410px;
+    background-color: var(--whisper-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--nero-color);
+
+    &::placeholder {
+      color: var(--nobel-color);
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 20.5px;
+    width: 410px;
+    height: 150px;
+    background-color: var(--whisper-color);
+    resize: none;
+    outline: none;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--nero-color);
+    padding-top: 16px;
+    padding-left: 23px;
+    outline: none;
+
+    &::placeholder {
+      color: var(--nobel-color);
+    }
+
+    &::-webkit-input-placeholder {
+      transform: translateX(0);
+      visibility: visible;
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+
+    &:focus::-webkit-input-placeholder {
+      transform: translateX(-100%);
+      visibility: hidden;
+      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    }
+  }
+
+  &__btn {
+    padding: 15.3px 22px;
+    max-width: 126px;
+  }
+}
