@@ -28,6 +28,7 @@ img {
 
 a {
   text-decoration: none;
+  outline: none;
 }
 
 .site-container {
@@ -35,7 +36,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -132,4 +134,11 @@ input {
   font-size: 24px;
   line-height: 31px;
   color: var(--white-color);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  appearance: none;
 }
