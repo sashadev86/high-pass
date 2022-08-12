@@ -31,11 +31,11 @@
   }
 
   .ymaps-2-1-79-controls__toolbar {
-    margin-top: 0!important;
+    margin-top: 0 !important;
   }
 
   .ymaps-2-1-79-controls__control_toolbar {
-    margin-left: 0!important;
+    margin-left: 0 !important;
   }
 
   .customControl {
@@ -139,21 +139,25 @@
     padding-top: 16px;
     padding-left: 23px;
     outline: none;
+    transition: outline .3s ease-in-out;
 
     &::placeholder {
       color: var(--nobel-color);
+      transition: color .3s ease-in-out;
     }
 
-    &::-webkit-input-placeholder {
-      transform: translateX(0);
-      visibility: visible;
-      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    @include hover {
+      +&::placeholder  {
+        color: var(--burnt-orange-color);
+      }
     }
 
-    &:focus::-webkit-input-placeholder {
-      transform: translateX(-100%);
-      visibility: hidden;
-      transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+    &:focus-visible {
+      outline: 1px solid var(--burnt-orange-color);
+    }
+
+    &:active {
+      outline: 1px solid var(--bittersweet-color);
     }
   }
 

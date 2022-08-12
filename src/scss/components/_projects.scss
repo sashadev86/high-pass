@@ -150,7 +150,18 @@
       max-width: max-content;
       padding: 12px 20px;
       background-color: transparent;
-      border: 3px solid var(--burnt-orange-color);
+      outline: 3px solid var(--burnt-orange-color);
+
+
+      @include hover {
+        + & {
+          outline: none;
+        }
+      }
+
+      &:focus-visible {
+        background-color: var(--fiery-orange-color);
+      }
     }
   }
 }

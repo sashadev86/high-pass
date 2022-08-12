@@ -70,5 +70,20 @@
     width: 30px;
     height: 30px;
     fill: var(--whisper-color);
+    transition: fill .3s ease-in-out;
+
+    @include hover {
+      + & {
+        fill: var(--burnt-orange-color);
+      }
+    }
+  }
+
+  &__link:focus-visible svg {
+    fill: var(--fiery-orange-color);
+  }
+
+  &__link:active svg {
+    fill: var(--harley-davidson-orange);
   }
 }
