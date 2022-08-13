@@ -139,17 +139,21 @@
     padding-top: 16px;
     padding-left: 23px;
     outline: none;
-    transition: outline .3s ease-in-out;
 
     &::placeholder {
+      opacity: 1;
       color: var(--nobel-color);
-      transition: color .3s ease-in-out;
+      transition: color .3s ease-in-out, opacity .3s ease-in-out;
     }
 
     @include hover {
       +&::placeholder  {
         color: var(--burnt-orange-color);
       }
+    }
+
+    &:focus-visible::placeholder {
+      opacity: 0;
     }
 
     &:focus-visible {

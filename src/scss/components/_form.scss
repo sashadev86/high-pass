@@ -39,26 +39,28 @@
     }
 
     &::-webkit-input-placeholder {
+      opacity: 1;
       color: var(--very-light-grey);
+      transition: color .3s ease-in-out, opacity .3s ease-in-out;
     }
 
     @include hover {
       + &:hover::-webkit-input-placeholder {
         color: var(--burnt-orange-color);
-        transition: color .3s ease-in-out;
       }
     }
 
     &:focus-visible::-webkit-input-placeholder {
       opacity: 0;
+      transition: opacity .3s ease-in-out;
     }
 
     &:focus-visible {
-      outline: 1px solid #FF6E30;
+      outline: 1px solid var(--burnt-orange-color);
     }
 
     &:active {
-      outline: 1px solid #F06666;
+      outline: 1px solid var(--bittersweet-color);
     }
   }
 }
