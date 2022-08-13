@@ -13,8 +13,27 @@
     grid-template-rows: 300px 300px;
     gap: 30px;
 
+    @include high-desktop {
+      & {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 285px 307px 307px;
+        row-gap: 24px;
+      }
+    }
+
     &-link {
       position: relative;
+      display: flex;
+      flex-direction: column;
+
+      &-image {
+        margin-bottom: 13px;
+
+        @include high-desktop {
+          min-width: 100%;
+          height: 184px;
+        }
+      }
 
       &-tag {
         position: absolute;
@@ -33,31 +52,77 @@
 
     &-link--3 {
       grid-column: 5/7;
+
+      @include high-desktop {
+        & {
+          grid-column: 5/9;
+          grid-row: 1 / 1;
+        }
+
+        & img {
+          min-width: 100%;
+          object-position: bottom;
+        }
+      }
     }
 
     &-link--4 {
       grid-column: 7/10;
+
+      @include high-desktop {
+        & {
+          grid-column: 6/9;
+          grid-row: 2/2;
+        }
+
+        & img {
+          min-width: 100%;
+        }
+      }
     }
 
     &-link--5 {
       grid-column: 10/13;
-    }
 
-    &-link-image {
-      margin-bottom: 13px;
+      @include high-desktop {
+        & {
+          grid-column: 1/4;
+          grid-row: 3/3;
+        }
+
+        & img {
+          min-width: 100%;
+        }
+      }
     }
 
     &-link-text {
-      margin-bottom: 11px;
       font-family: 'Roboto';
       font-style: normal;
       font-weight: 400;
       font-size: 16px;
       line-height: 22px;
       color: var(--nero-color);
+
+      @include big-desktop {
+        & span {
+          display: none;
+        }
+      }
+
+      &--hidden span {
+        display: none;
+
+        @include high-desktop {
+          & {
+            display: inline-block;
+          }
+        }
+      }
     }
 
     &-link-date {
+      margin-top: auto;
       display: flex;
       align-items: center;
       font-family: 'Roboto';
@@ -79,6 +144,13 @@
       grid-column: 7/13;
       position: relative;
 
+      @include high-desktop {
+        & {
+          grid-column: 1/6;
+          grid-row: 2/2;
+        }
+      }
+
       &-tag {
         position: absolute;
         top: 7px;
@@ -90,11 +162,23 @@
       grid-column: 1/7;
       position: relative;
 
+      @include high-desktop {
+        & {
+          grid-column: 4/9;
+          grid-row: 3/3;
+        }
+      }
+
       &-tag {
         position: absolute;
         top: 7px;
         right: 7px;
       }
+    }
+
+    &-image {
+      min-width: 100%;
+      height: 307px;
     }
 
     &-content {
@@ -105,6 +189,16 @@
       position: absolute;
       top: 0;
       padding: 22px 29px 30px 29px;
+
+      @include high-desktop {
+        & {
+          padding: 30px 26px 34px 31px;
+
+          &--analysis {
+            padding-bottom: 41px;
+          }
+        }
+      }
     }
 
     &-date {
@@ -161,6 +255,12 @@
 
       &:focus-visible {
         background-color: var(--fiery-orange-color);
+      }
+
+      @include high-desktop {
+        & {
+          margin-left: 2px;
+        }
       }
     }
   }

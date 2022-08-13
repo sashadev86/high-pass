@@ -6,15 +6,31 @@
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+
+    @include high-desktop {
+      grid-template-columns: repeat(8, 1fr);
+    }
   }
 
   &__left {
     grid-column: 1/4;
+
+    @include high-desktop {
+      padding-top: 5px;
+      padding-left: 2px;
+    }
   }
 
   &__logo {
     margin-bottom: 4px;
     padding-top: 2px;
+
+    @include high-desktop {
+      & {
+        width: 166px;
+        height: 26.79px;
+      }
+    }
   }
 
   &__signature {
@@ -36,6 +52,14 @@
     font-size: 16px;
     line-height: 22px;
     color: var(--very-light-grey);
+
+    @include high-desktop {
+      & {
+        grid-column: 4/8;
+        max-width: 382px;
+        padding-left: 29px;
+      }
+    }
   }
 
   &__right {
@@ -43,6 +67,12 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+
+    @include high-desktop {
+      & {
+        grid-column: 8/9;
+      }
+    }
   }
 
   &__interesting {

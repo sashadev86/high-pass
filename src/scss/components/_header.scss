@@ -8,6 +8,12 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+
+    @include high-desktop {
+      & {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
   }
 
   &__link {
@@ -15,17 +21,36 @@
 
     &-logo {
       padding-top: 2px;
+
+      @include high-desktop {
+        & {
+          max-width: 166px;
+          max-height: 28px;
+        }
+      }
     }
   }
 
   .nav {
     grid-column: 4 / 11;
 
+    @include high-desktop {
+      & {
+        grid-column: 3/8;
+      }
+    }
+
     &__list {
       display: flex;
       justify-content: space-between;
       padding-left: 7px;
       padding-right: 3px;
+
+      @include high-desktop {
+        & {
+          padding-right: 37px;
+        }
+      }
     }
 
     &__link {
@@ -70,9 +95,15 @@
   }
 
   &__wrap {
-    grid-column: 11 / span 12;
+    grid-column: 11 / 13;
     display: grid;
     justify-content: flex-end;
+
+    @include high-desktop {
+      & {
+        grid-column: 8/9;
+      }
+    }
 
     &-btn {
       position: relative;

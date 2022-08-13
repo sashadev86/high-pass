@@ -3,6 +3,10 @@
   padding-bottom: 70px;
   background-color: var(--nero-color);
 
+  @include high-desktop {
+    padding-bottom: 82px;
+  }
+
   &__title {
     margin-bottom: 5px;
   }
@@ -11,24 +15,48 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 30px;
+
+    @include high-desktop {
+      & {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
   }
 
   &__text {
-    grid-column: 1 / span 6;
+    grid-column: 1 / 7;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     color: var(--very-light-grey);
+
+    @include high-desktop {
+      grid-column: 1 / 5;
+    }
   }
 
   &__right {
     margin-top: -2px;
     grid-column: 7 / 13;
 
+    @include high-desktop {
+      & {
+        grid-column: 5 / 9;
+      }
+    }
+
     &-img {
       margin-bottom: 21px;
+
+      @include high-desktop {
+        & {
+          height: 332px;
+          margin-bottom: 20px;
+          object-position: 51% 55%;
+        }
+      }
     }
 
     &-title {
@@ -39,6 +67,25 @@
       font-size: 24px;
       line-height: 22px;
       color: var(--white-color);
+
+      @include high-desktop {
+        margin-left: -2px;
+      }
+    }
+  }
+
+  &__input {
+    max-width: 474px;
+    margin-right: 23px;
+
+    @include big-desktop {
+      & {
+        margin-bottom: 20px;
+      }
+    }
+
+    @include high-desktop {
+      width: 342px;
     }
   }
 

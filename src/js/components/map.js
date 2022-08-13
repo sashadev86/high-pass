@@ -6,8 +6,7 @@ ymaps.ready(['Panel']).then(function () {
   });
   // Создадим контент для меток.
   var office = '<h3 style="margin-bottom: 5px; margin-left: 10px; font-family: TT Firs Neue; font-style: normal; font-weight: 400; font-size: 24px; line-height: 22px; color: var(--white-color);">Студия «High pass»</h3>' +
-    '<p style="max-width: 300px; margin-bottom: 3px; margin-left: 10px; font-family: Roboto; font-style: normal; font-weight: 400; font-size: 16px; line-height: 28px; color: var(--white-color);">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82</p>' +
-    '<a href="tel:+749542423532" style="margin-left: 14px; font-family: TT Firs Neue; font-style: normal; font-weight: 400; font-size: 16px; line-height: 21px; display: flex; align-items: center; color: var(--burnt-orange-color);"><img src="img/telMap.svg" alt="Телефонная трубка">+7 495 424-23-532</a>';
+    '<p style="max-width: 301px; margin-bottom: 3px; margin-left: 10px; font-family: Roboto; font-style: normal; font-weight: 400; font-size: 16px; line-height: 28px; color: var(--white-color);">107045, Москва, Даев переулок, дом 41, бизнес-центр «Даев Плаза», этаж 8, офис № 82 <a href="tel:+749542423532" style="margin-left: 2px; font-family: TT Firs Neue; font-style: normal; font-weight: 400; font-size: 16px; line-height: 21px; display: flex; align-items: center; color: var(--burnt-orange-color);"><img src="img/telMap.svg" alt="Телефонная трубка">+7 495 424-23-532</a></p>';
   // Создадим и добавим панель на карту.
   var panel = new ymaps.Panel();
   map.controls.add(panel, {
