@@ -23,6 +23,12 @@
         grid-template-columns: repeat(8, 1fr);
       }
     }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
   }
 
   &__map {
@@ -32,6 +38,12 @@
     @include big-desktop {
       & {
         grid-column: 1/6;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 1/7;
       }
     }
   }
@@ -113,7 +125,15 @@
     grid-column: 9/13;
 
     @include big-desktop {
-      grid-column: 6/9;
+      & {
+        grid-column: 6/9;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 1/5;
+      }
     }
 
     &-title {

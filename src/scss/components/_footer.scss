@@ -8,7 +8,15 @@
     grid-template-columns: repeat(12, 1fr);
 
     @include high-desktop {
-      grid-template-columns: repeat(8, 1fr);
+      & {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
     }
   }
 
@@ -18,6 +26,12 @@
     @include high-desktop {
       padding-top: 5px;
       padding-left: 2px;
+    }
+
+    @include high-tablet {
+      & {
+        padding-left: 0;
+      }
     }
   }
 
@@ -60,6 +74,12 @@
         padding-left: 29px;
       }
     }
+
+    @include high-tablet {
+      & {
+        display: none;
+      }
+    }
   }
 
   &__right {
@@ -71,6 +91,12 @@
     @include high-desktop {
       & {
         grid-column: 8/9;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 5/7;
       }
     }
   }

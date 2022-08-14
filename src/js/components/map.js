@@ -10,7 +10,7 @@ ymaps.ready(['Panel']).then(function () {
   // Создадим и добавим панель на карту.
   var panel = new ymaps.Panel();
   map.controls.add(panel, {
-    float: 'left'
+    // float: 'left'
   });
   // Создадим коллекцию геообъектов.
   var collection = new ymaps.GeoObjectCollection(null, {
