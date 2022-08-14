@@ -15,8 +15,18 @@
     }
 
     @include high-desktop {
-      grid-template-columns: repeat(8, 1fr);
-      padding-top: 35px;
+      & {
+        grid-template-columns: repeat(8, 1fr);
+        padding-top: 35px;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 30px 228px 133px;
+        padding: 36px 27px 69px 27px;
+      }
     }
   }
 
@@ -38,13 +48,27 @@
       }
     }
 
+    @include high-tablet {
+      & {
+        grid-column: 1/4;
+      }
+    }
+
     &-image {
+      width: 100%;
       object-position: 55% 57%;
 
       @include big-desktop {
         & {
           height: 623px;
           object-position: 55% 51%;
+        }
+      }
+
+      @include high-tablet {
+        & {
+          height: 452px;
+          object-position: 55% 92%;
         }
       }
     }
@@ -68,6 +92,12 @@
           left: 29px;
         }
       }
+
+      @include high-tablet {
+        & {
+          bottom: 200px;
+        }
+      }
     }
 
     &-text {
@@ -86,6 +116,13 @@
           padding-left: 2px;
         }
       }
+
+      @include high-tablet {
+        & {
+          margin-bottom: 15px;
+          padding-left: 0px;
+        }
+      }
     }
 
     &-title {
@@ -102,6 +139,14 @@
           margin-bottom: 21px;
           padding-left: 2px;
           font-size: 34px;
+        }
+      }
+
+      @include high-tablet {
+        & {
+          line-height: 90%;
+          margin-bottom: 24px;
+          padding-left: 0px;
         }
       }
     }
@@ -126,6 +171,13 @@
         grid-column: 5 / 9;
       }
     }
+
+    @include high-tablet {
+      & {
+        grid-column: 4/7;
+        font-size: 22px;
+      }
+    }
   }
 
   &__right-link {
@@ -134,6 +186,7 @@
 
     @include big-desktop {
       &-image {
+        width: 100%;
         height: 332px;
         object-position: 2% 55%;
       }
@@ -142,6 +195,16 @@
     @include high-desktop {
       & {
         grid-column: 5 / 9;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 4/7;
+      }
+
+      &-image {
+        height: 228px;
       }
     }
 
@@ -155,13 +218,27 @@
         }
       }
 
+      @include high-tablet {
+        & {
+          grid-column: 4/6;
+        }
+      }
+
       &-image {
+        width: 100%;
         object-position: 55% 66%;
 
         @include big-desktop {
           & {
             height: 186px;
             object-position: 55% 50%;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            width: 156px;
+            height: 133px;
           }
         }
       }
@@ -173,6 +250,7 @@
 
       @include big-desktop {
         &-image {
+          width: 100%;
           height: 186px;
           object-position: 52% 55%;
         }
@@ -181,6 +259,20 @@
       @include high-desktop {
         & {
           grid-column: 7 / 9;
+        }
+      }
+
+      @include high-tablet {
+        & {
+          grid-column: 5/7;
+          display: flex;
+          justify-content: flex-end;
+        }
+
+        &-image {
+          width: 156px;
+          height: 133px;
+          object-position: 50% 55%;
         }
       }
     }

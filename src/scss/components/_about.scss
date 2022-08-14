@@ -4,7 +4,15 @@
   background-color: var(--nero-color);
 
   @include high-desktop {
-    padding-bottom: 82px;
+    & {
+      padding-bottom: 82px;
+    }
+  }
+
+  @include high-tablet {
+    & {
+      padding-bottom: 62px;
+    }
   }
 
   &__title {
@@ -21,6 +29,12 @@
         grid-template-columns: repeat(8, 1fr);
       }
     }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
   }
 
   &__text {
@@ -33,7 +47,15 @@
     color: var(--very-light-grey);
 
     @include high-desktop {
-      grid-column: 1 / 5;
+      & {
+        grid-column: 1 / 5;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 1/4;
+      }
     }
   }
 
@@ -47,7 +69,14 @@
       }
     }
 
+    @include high-tablet {
+      & {
+        grid-column: 4/7;
+      }
+    }
+
     &-img {
+      width: 100%;
       margin-bottom: 21px;
 
       @include high-desktop {
@@ -55,6 +84,13 @@
           height: 332px;
           margin-bottom: 20px;
           object-position: 51% 55%;
+        }
+      }
+
+      @include high-tablet {
+        & {
+          height: 569px;
+          object-position: 50% 55%;
         }
       }
     }

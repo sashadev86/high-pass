@@ -1,9 +1,15 @@
 .header {
+  position: relative;
   height: 80px;
   background-color: var(--nero-color);
 
+  @include high-tablet {
+    & {
+      height: 125px;
+    }
+  }
+
   &__container {
-    position: relative;
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -12,6 +18,13 @@
     @include high-desktop {
       & {
         grid-template-columns: repeat(8, 1fr);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+        padding: 0 27px;
       }
     }
   }
@@ -25,76 +38,109 @@
       @include high-desktop {
         & {
           max-width: 166px;
-          max-height: 28px;
+          max-height: 26.79px;
         }
+      }
+    }
+
+    @include high-tablet {
+      & {
+        order: 1;
+        padding-bottom: 42px;
+        margin-left: 1px;
       }
     }
   }
 
-  .nav {
+  &__wrap-nav {
     grid-column: 4 / 11;
-
-    @include high-desktop {
-      & {
-        grid-column: 3/8;
-      }
-    }
-
-    &__list {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 7px;
-      padding-right: 3px;
 
       @include high-desktop {
         & {
-          padding-right: 37px;
-        }
-      }
-    }
-
-    &__link {
-      position: relative;
-      z-index: 1;
-      font-family: 'TT Firs Neue';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
-      color: var(--white-color);
-      transition: color .3s ease-in-out;
-
-      @include hover {
-        + & {
-          color: var(--burnt-orange-color);
+          grid-column: 3/8;
         }
       }
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: -2px;
-        bottom: -2px;
-        left: -5px;
-        width: calc(100% + 10px);
-        background-color: var(--fiery-orange-color);
-        z-index: -1;
-        transform: translate(0, 0) scaleX(0);
-        transform-origin: center;
-        transition: transform .3s ease-in-out;
+      @include high-tablet {
+        & {
+          grid-column: 1/7;
+          order: 3;
+          position: absolute;
+          width: 100%;
+          top: 80px;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          padding: 12px 27px 0 27px;
+          background-color: var(--charcoal-color);
+        }
       }
 
-      &:focus-visible:not(:active):not(:hover)::before {
-        transform: translate(0, 0) scaleX(1);
+    .nav {
+
+      &__list {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 7px;
+        padding-right: 3px;
+
+        @include high-desktop {
+          & {
+            padding-right: 37px;
+          }
+        }
+
+        @include high-tablet {
+          & {
+            padding: 0;
+          }
+        }
       }
 
-      &:active {
-        color: var(--harley-davidson-orange);
+      &__link {
+        position: relative;
+        z-index: 1;
+        font-family: 'TT Firs Neue';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 21px;
+        color: var(--white-color);
+        transition: color .3s ease-in-out;
+
+        @include hover {
+          + & {
+            color: var(--burnt-orange-color);
+          }
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -2px;
+          bottom: -2px;
+          left: -5px;
+          width: calc(100% + 10px);
+          background-color: var(--fiery-orange-color);
+          z-index: -1;
+          transform: translate(0, 0) scaleX(0);
+          transform-origin: center;
+          transition: transform .3s ease-in-out;
+        }
+
+        &:focus-visible:not(:active):not(:hover)::before {
+          transform: translate(0, 0) scaleX(1);
+        }
+
+        &:active {
+          color: var(--harley-davidson-orange);
+        }
       }
     }
   }
 
   &__wrap {
+    position: relative;
     grid-column: 11 / 13;
     display: grid;
     justify-content: flex-end;
@@ -102,6 +148,13 @@
     @include high-desktop {
       & {
         grid-column: 8/9;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 6/7;
+        order: 2;
       }
     }
 
@@ -154,6 +207,12 @@
           fill: var(--harley-davidson-orange);
         }
       }
+
+      @include high-tablet {
+        & {
+          padding-bottom: 72px;
+        }
+      }
     }
 
   }
@@ -161,8 +220,8 @@
   &__form {
     position: absolute;
     z-index: 2;
-    top: 26px;
-    right: 18px;
+    top: 0;
+    right: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;

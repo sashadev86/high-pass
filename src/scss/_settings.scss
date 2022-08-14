@@ -88,6 +88,12 @@ a {
   margin: 0 auto;
   padding: 0 var(--container-offset);
   max-width: var(--container-width);
+
+  @include high-tablet {
+    & {
+      padding: 0 27px;
+    }
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
