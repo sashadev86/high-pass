@@ -23,7 +23,6 @@
 
     @include high-tablet {
       & {
-        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 30px 228px 133px;
         padding: 36px 27px 69px 27px;
       }
@@ -45,12 +44,6 @@
     @include high-desktop {
       & {
         grid-column: 1 / 5;
-      }
-    }
-
-    @include high-tablet {
-      & {
-        grid-column: 1/4;
       }
     }
 
@@ -174,7 +167,6 @@
 
     @include high-tablet {
       & {
-        grid-column: 4/7;
         font-size: 22px;
       }
     }
@@ -199,10 +191,6 @@
     }
 
     @include high-tablet {
-      & {
-        grid-column: 4/7;
-      }
-
       &-image {
         height: 228px;
       }
@@ -215,12 +203,6 @@
       @include high-desktop {
         & {
           grid-column: 5 / 7;
-        }
-      }
-
-      @include high-tablet {
-        & {
-          grid-column: 4/6;
         }
       }
 
@@ -237,7 +219,6 @@
 
         @include high-tablet {
           & {
-            width: 156px;
             height: 133px;
           }
         }
@@ -263,14 +244,7 @@
       }
 
       @include high-tablet {
-        & {
-          grid-column: 5/7;
-          display: flex;
-          justify-content: flex-end;
-        }
-
         &-image {
-          width: 156px;
           height: 133px;
           object-position: 50% 55%;
         }
