@@ -24,7 +24,6 @@
     @include high-tablet {
       & {
         grid-template-columns: repeat(6, 1fr);
-        padding: 0 27px;
       }
     }
   }
@@ -55,29 +54,35 @@
   &__wrap-nav {
     grid-column: 4 / 11;
 
-      @include high-desktop {
-        & {
-          grid-column: 3/8;
-        }
+    @include high-desktop {
+      & {
+        grid-column: 3/8;
       }
+    }
 
-      @include high-tablet {
-        & {
-          grid-column: 1/7;
-          order: 3;
-          position: absolute;
-          width: 100%;
-          top: 80px;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          padding: 12px 27px 0 27px;
-          background-color: var(--charcoal-color);
-        }
+    @include high-tablet {
+      & {
+        grid-column: 1/7;
+        order: 3;
+        position: absolute;
+        width: 100%;
+        top: 80px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 12px 27px 0 27px;
+        background-color: var(--charcoal-color);
       }
+    }
+
+    @include mobile {
+      & {
+        top: 70px;
+        padding: 0 21px;
+      }
+    }
 
     .nav {
-
       &__list {
         display: flex;
         justify-content: space-between;
@@ -95,6 +100,22 @@
             padding: 0;
           }
         }
+
+        @include mobile {
+          & {
+            flex-direction: column;
+            padding-top: 48px;
+            padding-left: 21px;
+          }
+        }
+      }
+
+      &__item {
+        @include mobile {
+          &:not(:last-child) {
+            margin-bottom: 30px;
+          }
+        }
       }
 
       &__link {
@@ -109,7 +130,7 @@
         transition: color .3s ease-in-out;
 
         @include hover {
-          + & {
+          +& {
             color: var(--burnt-orange-color);
           }
         }
@@ -136,7 +157,58 @@
           color: var(--harley-davidson-orange);
         }
       }
+
+      .phone {
+        display: none;
+
+        @include mobile {
+          & {
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+            padding-left: 18px;
+            height: 18px;
+            padding-bottom: 36%;
+          }
+
+          & svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--burnt-orange-color);
+          }
+
+          &__nav {
+            font-family: 'TT Firs Neue';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            color: var(--burnt-orange-color);
+          }
+        }
+      }
+
+      @include mobile {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        z-index: 500;
+        overflow-y: auto;
+        width: 100%;
+        height: var(--vh);
+        background-color: var(--nero-color);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+      }
     }
+
+      .menu--active {
+        opacity: 1;
+        visibility: visible;
+      }
   }
 
   &__wrap {
@@ -198,7 +270,7 @@
         transition: fill .3s ease-in-out;
 
         @include hover {
-          + & {
+          +& {
             fill: var(--burnt-orange-color);
           }
         }

@@ -6,17 +6,34 @@
     </a>
 
     <div class="header__wrap-nav">
-      <nav class="nav" title="Навигация по сайту">
+
+      <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+        <svg>
+          <use xlink:href="img/sprite.svg#burger"></use>
+        </svg>
+      </button>
+
+      <nav class="nav" title="Навигация по сайту" data-menu>
+        <button class="btn-reset burger-close" aria-label="Закрыть меню" data-menu-close>
+          <svg>
+            <use xlink:href="img/sprite.svg#close"></use>
+          </svg>
+        </button>
         <ul class="list-reset nav__list">
-          <li class="nav__item"><a href="#about" class="nav__link" data-scroll>О студии</a></li>
-          <li class="nav__item"><a href="#project" class="nav__link" data-scroll>Наши проекты</a></li>
-          <li class="nav__item"><a href="#service" class="nav__link" data-scroll>Услуги</a></li>
-          <li class="nav__item"><a href="#master-class" class="nav__link" data-scroll>Мастер-классы</a></li>
-          <li class="nav__item"><a href="#contacts" class="nav__link" data-scroll>Контакты</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link" data-menu-item data-scroll>О студии</a></li>
+          <li class="nav__item"><a href="#project" class="nav__link" data-menu-item data-scroll>Наши проекты</a></li>
+          <li class="nav__item"><a href="#service" class="nav__link" data-menu-item data-scroll>Услуги</a></li>
+          <li class="nav__item"><a href="#master-class" class="nav__link" data-menu-item data-scroll>Мастер-классы</a></li>
+          <li class="nav__item"><a href="#contacts" class="nav__link" data-menu-item data-scroll>Контакты</a></li>
         </ul>
+          <div class="phone">
+            <svg>
+              <use xlink:href="img/sprite.svg#phone"></use>
+            </svg>
+            <a href="tel:+749542423532" class="phone__nav">+7 495 424-23-532</a>
+          </div>
       </nav>
     </div>
-
 
     <div class="header__wrap">
       <button class="btn-reset header__wrap-btn">

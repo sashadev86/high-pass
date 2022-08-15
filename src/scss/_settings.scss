@@ -94,6 +94,12 @@ a {
       padding: 0 27px;
     }
   }
+
+  @include mobile {
+    & {
+      padding: 0 21px;
+    }
+  }
 }
 
 .js-focus-visible :focus:not(.focus-visible) {

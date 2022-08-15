@@ -1,4 +1,4 @@
-export const throttle = (func, delay = 250) => {
+export const throttle = (func, delay = 2500) => {
   let isThrottled = false;
   let savedArgs = null;
   let savedThis = null;
