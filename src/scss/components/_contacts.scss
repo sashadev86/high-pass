@@ -8,9 +8,33 @@
     }
   }
 
+  @include mobile {
+    & {
+      padding-top: 16px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__container {
+    @include mobile {
+      & {
+        padding: 0;
+      }
+    }
+  }
+
   &__title {
     margin-bottom: 22px;
     color: var(--nero-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 13px;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
   }
 
   &__wrap {
@@ -29,6 +53,12 @@
         grid-template-columns: repeat(6, 1fr);
       }
     }
+
+    @include mobile {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   }
 
   &__map {
@@ -44,6 +74,13 @@
     @include high-tablet {
       & {
         grid-column: 1/7;
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-column: 1/3;
+        height: 472px;
       }
     }
   }
@@ -136,6 +173,13 @@
       }
     }
 
+    @include mobile {
+      & {
+        grid-column: 1/3;
+        padding: 0 21px;
+      }
+    }
+
     &-title {
       margin-top: -7px;
       margin-bottom: 5px;
@@ -145,6 +189,13 @@
       font-size: 24px;
       line-height: 22px;
       color: var(--nero-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 7px;
+          font-size: 18px;
+        }
+      }
     }
 
     &-text {
@@ -155,6 +206,14 @@
       font-size: 16px;
       line-height: 22px;
       color: var(--nobel-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 16px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
     }
   }
 
@@ -178,6 +237,19 @@
 
     &::placeholder {
       color: var(--nobel-color);
+
+      @include mobile {
+        & {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        height: 40px;
+      }
     }
   }
 
@@ -203,6 +275,19 @@
       opacity: 1;
       color: var(--nobel-color);
       transition: color .3s ease-in-out, opacity .3s ease-in-out;
+
+      @include mobile {
+        & {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        padding-top: 12px;
+      }
     }
 
     @include hover {
@@ -227,5 +312,14 @@
   &__btn {
     padding: 15.3px 22px;
     max-width: 126px;
+
+    @include mobile {
+      & {
+        padding: 12px 22px;
+        max-width: 115px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
   }
 }

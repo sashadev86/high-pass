@@ -164,6 +164,15 @@
     max-width: 474px;
     margin-right: 23px;
 
+    &::placeholder {
+      @include mobile {
+        & {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+
     @include big-desktop {
       & {
         margin-bottom: 20px;
