@@ -321,7 +321,13 @@
 
     &-image {
       min-width: 100%;
-      height: 307px;
+      height: 300px;
+
+      @include high-desktop {
+        & {
+          height: 307px;
+        }
+      }
 
       @include high-tablet {
         & {
@@ -343,7 +349,7 @@
       height: 100%;
       position: absolute;
       top: 0;
-      padding: 22px 29px 30px 29px;
+      padding: 22px 29px 34px 29px;
 
       @include high-desktop {
         & {
@@ -433,8 +439,9 @@
 
     &-btn {
       margin-top: auto;
+      margin-left: 4px;
       max-width: max-content;
-      padding: 12px 20px;
+      padding: 12px 19.5px;
       background-color: transparent;
       outline: 3px solid var(--burnt-orange-color);
 

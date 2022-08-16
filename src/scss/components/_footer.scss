@@ -1,8 +1,14 @@
 .footer {
   position: relative;
-  padding-top: 24px;
-  padding-bottom: 16px;
+  padding-top: 22px;
+  padding-bottom: 17px;
   background-color: var(--nero-color);
+
+  @include high-desktop {
+    & {
+      padding-top: 24px;
+    }
+  }
 
   @include mobile {
     & {
@@ -36,9 +42,10 @@
 
   &__left {
     grid-column: 1/4;
+    padding-top: 3px;
 
     @include high-desktop {
-      padding-top: 5px;
+      padding-top: 6px;
       padding-left: 2px;
     }
 
@@ -66,8 +73,7 @@
   }
 
   &__logo {
-    margin-bottom: 4px;
-    padding-top: 2px;
+    margin-bottom: 3px;
 
     @include high-desktop {
       & {
@@ -129,6 +135,7 @@
 
   &__right {
     grid-column: 11/13;
+    padding-top: 1px;
     display: flex;
     flex-direction: column;
     align-items: end;
