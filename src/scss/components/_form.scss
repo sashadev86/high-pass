@@ -1,0 +1,66 @@
+.form {
+
+  &__label {
+    position: relative;
+  }
+
+  .just-validate-error-label {
+    position: absolute;
+    width: 100px;
+    top: 3px;
+    left: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 11px;
+    color: var(--bittersweet-color) !important;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    background-color: var(--charcoal-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--white-color);
+    padding-left: 24px;
+    outline: none;
+
+    &::placeholder {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &::-webkit-input-placeholder {
+      opacity: 1;
+      color: var(--very-light-grey);
+      transition: color .3s ease-in-out, opacity .3s ease-in-out;
+    }
+
+    @include hover {
+      + &:hover::-webkit-input-placeholder {
+        color: var(--burnt-orange-color);
+      }
+    }
+
+    &:focus-visible::-webkit-input-placeholder {
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--burnt-orange-color);
+    }
+
+    &:active {
+      outline: 1px solid var(--bittersweet-color);
+    }
+  }
+}

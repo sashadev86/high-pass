@@ -1,0 +1,27 @@
+.btns {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--white-color);
+  padding: 15.5px 22px;
+  background-color: var(--burnt-orange-color);
+  outline: none;
+  border: none;
+  transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+
+  @include hover {
+    + & {
+      background-color: var(--fiery-orange-color);
+    }
+  }
+
+  &:focus-visible:not(:active):not(:hover) {
+    outline: 3px solid var(--harley-davidson-orange);
+  }
+
+  &:active {
+    background-color: var(--harley-davidson-orange);
+  }
+}

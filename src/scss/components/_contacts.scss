@@ -1,0 +1,457 @@
+.contacts {
+  padding-top: 34px;
+  padding-bottom: 69px;
+
+  @include big-desktop {
+    & {
+      padding-bottom: 67px;
+    }
+  }
+
+  @include mobile {
+    & {
+      padding-top: 16px;
+      padding-bottom: 50px;
+    }
+  }
+
+  &__container {
+    @include mobile {
+      & {
+        padding: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 22px;
+    color: var(--nero-color);
+
+    @include mobile {
+      & {
+        margin-bottom: 13px;
+        padding: 0 20px;
+        font-size: 18px;
+        line-height: 23px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+
+    @include big-desktop {
+      & {
+        grid-template-columns: repeat(8, 1fr);
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-template-columns: repeat(6, 1fr);
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  &__map {
+    grid-column: 1/9;
+    height: 460px;
+
+    @include big-desktop {
+      & {
+        grid-column: 1/6;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 1/7;
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-column: 1/3;
+        height: 472px;
+      }
+    }
+  }
+
+  [class*="ground-pane"] {
+    filter: grayscale(1);
+  }
+
+  .ymaps-2-1-79-copyright__content {
+    display: none !important;
+  }
+
+  .ymaps-2-1-79-map-copyrights-promo {
+    display: none;
+  }
+
+  .ymaps-2-1-79-controls__toolbar {
+    margin-top: 0 !important;
+  }
+
+  .ymaps-2-1-79-controls__control_toolbar {
+    margin: 0 !important;
+    display: unset;
+  }
+
+  .ymaps-2-1-79-controls__toolbar_right {
+    float: unset;
+  }
+
+  .ymaps-2-1-79-controls-pane {
+    @include high-desktop {
+      & {
+        top: 66% !important;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        top: 65.5% !important;
+      }
+    }
+
+    @include mobile {
+      & {
+        top: 67% !important;
+      }
+    }
+  }
+
+  .map__title {
+    padding-top: 26px;
+    padding-left: 10px;
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 0;
+    color: var(--white-color);
+
+    @include high-desktop {
+      & {
+        padding-top: 40px;
+        padding-left: 31px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 6px;
+        padding-top: 41px;
+        padding-left: 19px;
+        font-size: 18px;
+      }
+    }
+  }
+
+  .map__text {
+    max-width: 300px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--white-color);
+
+    @include high-desktop {
+      & {
+        display: inline-block;
+        padding-top: 18px;
+        padding-left: 17px;
+        max-width: 296px;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        display: block;
+        margin-top: -3px;
+        margin-bottom: 7px;
+        padding-top: 0px;
+        padding-left: 30px;
+        max-width: 425px;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-bottom: 10px;
+        padding-left: 19px;
+        max-width: 267px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .map__link {
+    margin-top: -18px;
+    padding-left: 14px;
+    font-family: 'TT Firs Neue';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    display: flex;
+    align-items: center;
+    color: var(--burnt-orange-color);
+
+    @include high-desktop {
+      & {
+        margin-left: -168px;
+        padding-left: 3px;
+      }
+
+      & img {
+        margin-right: 3px;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        margin-left: 15px;
+        padding-top: 0;
+      }
+    }
+
+    @include mobile {
+      & {
+        margin-left: 4px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      & img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  .customControl {
+    position: relative;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(32, 32, 32, 0.85);
+    width: 410px;
+    height: 460px;
+    padding-top: 12px;
+
+    @include high-desktop {
+      & {
+        justify-content: flex-start;
+        width: 100%;
+        height: 157px;
+        padding: 0;
+      }
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-image: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="10" cy="10" r="10" fill="%23999999"/%3E%3Crect x="6.20715" y="5.5" width="12" height="1" transform="rotate(45 6.20715 5.5)" fill="white"/%3E%3Crect x="5.59143" y="13.9854" width="12" height="1" transform="rotate(-45 5.59143 13.9854)" fill="white"/%3E%3C/svg%3E');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .content {
+    height: 167px;
+    overflow: auto;
+  }
+
+  a,
+  a:visited {
+    color: #04b;
+    text-decoration: none !important;
+
+    @include big-desktop {
+      display: inline-block !important;
+    }
+  }
+
+  &__right {
+    grid-column: 9/13;
+
+    @include big-desktop {
+      & {
+        grid-column: 6/9;
+      }
+    }
+
+    @include high-tablet {
+      & {
+        grid-column: 1/5;
+      }
+    }
+
+    @include mobile {
+      & {
+        grid-column: 1/3;
+        padding: 0 21px;
+      }
+    }
+
+    &-title {
+      margin-top: -7px;
+      margin-bottom: 5px;
+      font-family: 'TT Firs Neue';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 22px;
+      color: var(--nero-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 7px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    &-text {
+      margin-bottom: 14px;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--nobel-color);
+
+      @include mobile {
+        & {
+          margin-bottom: 16px;
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    background-color: var(--whisper-color);
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--nero-color);
+
+    &::placeholder {
+      color: var(--nobel-color);
+
+      @include mobile {
+        & {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        height: 40px;
+      }
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 20.5px;
+    width: 100%;
+    height: 150px;
+    background-color: var(--whisper-color);
+    resize: none;
+    outline: none;
+    border: none;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--nero-color);
+    padding-top: 16px;
+    padding-left: 23px;
+    outline: none;
+
+    &::placeholder {
+      opacity: 1;
+      color: var(--nobel-color);
+      transition: color .3s ease-in-out, opacity .3s ease-in-out;
+
+      @include mobile {
+        & {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+    }
+
+    @include mobile {
+      & {
+        padding-top: 12px;
+      }
+    }
+
+    @include hover {
+      +&::placeholder {
+        color: var(--burnt-orange-color);
+      }
+    }
+
+    &:focus-visible::placeholder {
+      opacity: 0;
+    }
+
+    &:focus-visible {
+      outline: 1px solid var(--burnt-orange-color);
+    }
+
+    &:active {
+      outline: 1px solid var(--bittersweet-color);
+    }
+  }
+
+  &__btn {
+    padding: 15.3px 22px;
+    max-width: 126px;
+
+    @include mobile {
+      & {
+        padding: 12px 22px;
+        max-width: 115px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

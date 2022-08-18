@@ -1,0 +1,64 @@
+.burger {
+  display: none;
+  position: relative;
+  padding-top: 14px;
+
+  & svg {
+    width: 20px;
+    height: 18px;
+    fill: var(--white-color);
+  }
+
+  @include mobile {
+    & {
+      display: block;
+    }
+  }
+
+  &__line {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 100px;
+    width: 26px;
+    height: 2px;
+    background-color: var(--white-color);
+    transform: translateX(-50%) translateY(-50%);
+
+    &:first-child {
+      margin-top: -7px;
+    }
+
+    &:last-child {
+      left: 9px;
+      margin-top: 7px;
+      width: 13px;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.burger-close {
+  display: none;
+  position: absolute;
+  right: var(--container);
+  top: 14px;
+  left: 21px;
+  width: 18px;
+  height: 18px;
+  background-color: #808080;
+  background-size: contain;
+  border-radius: 100%;
+
+  & svg {
+    width: 10px;
+    height: 10px;
+    fill: var(--white-color);
+  }
+
+  @include mobile {
+    & {
+      display: block;
+    }
+  }
+}
