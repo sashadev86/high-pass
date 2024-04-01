@@ -1,7 +1,7 @@
 # Вёрстка учебного макета high-pass. #
 
 #### Ссылка на деплой: ###
-- https://banditos86.github.io/high-pass/
+- https://sashadev86.github.io/high-pass/
 
 
 ![Скриншот сайта high-pass](high-pass.png 'Скриншот сайта high-pass')
